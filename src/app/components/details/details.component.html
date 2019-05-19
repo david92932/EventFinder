@@ -1,0 +1,19 @@
+<div *ngFor="let event of events">
+  <br>
+  <mat-card>
+    <h1>Event: {{event.eventName}}</h1>
+    <div>Number Attending: {{event.attending.length}}</div>
+    <br>
+    <div>Event Location: {{event.location}}</div>
+    <br>
+    <div>Date: {{event.date}}</div>
+    <div>Time: {{event.time}}</div>
+    <br>
+    <div>Comments: {{event.comments}}</div>
+    <br>
+    <div>Host: {{event.organizerName}}</div>
+    <br>
+    <button mat-button color="primary" (click)="IMIN(event._id)">I'M IN!</button>
+
+  </mat-card>
+</div>

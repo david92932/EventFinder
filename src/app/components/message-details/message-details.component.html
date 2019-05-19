@@ -1,0 +1,13 @@
+<div *ngFor="let message of messages">
+  <br>
+  <mat-card>
+    <h1>{{message.subject}}</h1>
+    <div>Sender: {{message.sender}}</div>
+    <br>
+    <mat-divider></mat-divider>
+    <br>
+    <div>{{message.message}}</div>
+    <br>
+    <button mat-button color="primary" (click)="goBack()">Back</button>
+  </mat-card>
+</div>

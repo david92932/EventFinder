@@ -1,0 +1,39 @@
+<div>
+  <br>
+  <mat-card>
+    <section class="mat-typography">
+      <h3>Update Event</h3>
+    </section>
+
+    <mat-divider></mat-divider>
+    <br>
+    <form [formGroup]="updateForm" class = "edit-form">
+      <mat-form-field class="field-full-width">
+        <input matInput placeholder="Event Name" formControlName="eventName" #eventName>
+      </mat-form-field>
+
+      <mat-form-field class="field-full-width">
+        <input matInput placeholder="location" formControlName="location" #location>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Select a Date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <input [ngxTimepicker]="timePicker" placeholder="Select a Time">
+      <ngx-material-timepicker #timePicker></ngx-material-timepicker>
+
+      <mat-form-field class="field-full-width">
+        <textarea matInput placeholder="Comments" formControlName="comments" #comments></textarea>
+      </mat-form-field>
+
+      <mat-divider></mat-divider>
+      <br>
+      <button mat-raised-button color="accent" routerLink="/profile">Cancel</button>
+      <button type="submit" (click)="updateEvent(eventName.value, location.value, picker.valueOf(), timePicker.valueOf(), comments.value)"
+              [disabled]= "updateForm.pristine || updateForm.invalid" mat-raised-button color="primary">Create Event</button>
+    </form>
+  </mat-card>
+</div>

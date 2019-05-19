@@ -1,0 +1,21 @@
+
+<div>
+  <br>
+  <mat-card>
+    <h1>All Messages</h1>
+    <mat-divider></mat-divider>
+    <br>
+    <div *ngIf="messages.length == 0">No Messages.</div>
+    <div *ngFor="let message of messages">
+      <h4>{{message.subject}}</h4>
+      <div>
+        <div *ngIf="!message.read">UNREAD</div>
+        <div>FROM: {{message.sender}}</div>
+      </div>
+      <button mat-button color="primary" (click)="messageDetails(message._id)">See Details</button>
+      <mat-divider></mat-divider>
+    </div>
+  </mat-card>
+</div>
+
+

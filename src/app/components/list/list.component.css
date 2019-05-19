@@ -1,0 +1,16 @@
+table{
+  width: 100%;
+
+}
+
+.mat-column-right{
+  text-align: center;
+}
+
+.aRight{
+  margin-left: 25%;
+}
+
+.aLeft{
+  text-align: left;
+}
