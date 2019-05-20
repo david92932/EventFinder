@@ -6,7 +6,8 @@ import { HttpClient, HttpHeaders} from '@angular/common/http';
 })
 export class EventService {
 
-  uri = 'http://localhost:3000';
+  // 'http://localhost:3000'
+  uri = 'https://git.heroku.com/event-serverrr.git';
 
   constructor(private http: HttpClient) { }
   getEvents() {
